@@ -1,4 +1,8 @@
-import { faStar, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faStar,
+  faMapMarkerAlt,
+  faCheckCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -12,12 +16,20 @@ const DealerProfile = () => {
         <div className="col-5 text-start">
           <div className="d-flex ">
             <h4>SHREE HEMKUNT TYRES AND SERVICES</h4>
-            <span className="">Verified</span>
+            <span className="text-success ms-2 d-flex gap-1">
+              <div>
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className="text-success"
+                />
+              </div>
+              Verified
+            </span>
           </div>
           <div className="d-flex align-items-center mb-2">
             <div className="badge bg-success text-white me-2">5</div>
             {stars}
-            <span className="text-muted mx-1"> 215 Review</span>
+            <a className="text-muted mx-1"> 215 Review</a>
           </div>
           <p className="mb-2">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
